@@ -13,6 +13,8 @@ Este projeto é um site de e-commerce especializado em hamburguerias, onde os us
 - **Finalização de Compra**: Processo de checkout que inclui a revisão dos itens, cálculo do total da compra e fornecimento dos dados para pagamento e entrega.
 - **Alteração de dados do Usuário**: O usuário poderá alterar os dados de sua conta.
 - **Manipulação de endereço**: O usuário terá a possibilidade de criar endereço, alterar os dados do mesmo ou excluir o endereço se nescessário.
+- **Manipulação de comentário**: O usuário terá a possibilidade de criar comentários, avaliar com um total de cinco estrelas ou excluir se nescessário.
+
 
 ## Tecnologias Utilizadas
 
