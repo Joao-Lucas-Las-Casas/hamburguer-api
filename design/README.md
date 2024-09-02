@@ -72,7 +72,7 @@
    Paleta de Cores: Branco, preto e cinza claro.
 
 - Card Centralizado:
-- Título Principal: "Entrar".
+- Título Principal: "Login".
 - Campo de Nome: Com título "Nome" e espaço para o usuário escrever o login.
 - Campo de Senha: Com título "Senha" e espaço para o usuário escrever a senha.
 - Botão de Login: "Entrar".
