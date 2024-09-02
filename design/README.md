@@ -60,6 +60,8 @@
 - Botão X: Para fechar a aba lateral.
 - Título: "Pedido".
 - Conteúdo: Nome dos pedidos, quantidade, preço individual e total.
+- Endereço: Usuário pode adicionar endereço, número e complemento.
+- Botão X: Usuário pode apagar endereço, número e complemento, se desejar.
 - Botão de Compra: Para finalizar a compra.
 - Fundo: Cinza escuro.
 
