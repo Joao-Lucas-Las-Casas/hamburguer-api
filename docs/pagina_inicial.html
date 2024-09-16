@@ -28,12 +28,12 @@
     <div class="div_navbar">
         <nav class="navbar">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#destaque">Destaque</a></li>
-                <li><a href="#popular">Popular</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#avaliacao">Avaliação</a></li>
-                <li><a href="#pedido">Pedido</a></li>
+                <li><a href="#" class="navbar_itens">Inicio</a></li>
+                <li><a href="#destaque" class="navbar_itens">Destaque</a></li>
+                <li><a href="#popular" class="navbar_itens">Popular</a></li>
+                <li><a href="#galeria" class="navbar_itens">Galeria</a></li>
+                <li><a href="#avaliacao" class="navbar_itens">Avaliação</a></li>
+                <li><button class="navbar_itens navbar_itens_btn" onclick="document.getElementById('barra_lateral').style.display = 'block'">Pedido</button></li>
 
             </ul>
         </nav>
@@ -57,7 +57,7 @@
             escrito.nossa missão é oferecer uma experiência única, onde cada mordida é uma explosão de sabores
             cuidadosamentes
             programados para satisfazer os paladares mais exigentes.</p>
-        <a href="#" class="cta-button">Peça Agora</a>
+        <a href="#galeria" class="cta-button">Peça Agora</a>
     </div>
 </div>
 <div class="fundo_2 carousel-container" id="destaque">
@@ -120,17 +120,17 @@
             <div class="card">
                 <img src="images/lanche_2.jpg" alt="ArrayBurguer" class="menu-img">
                 <div class="menu-name">ArrayBurguer</div>
-                <div class="order-btn">Peça Agora</div>
+                <a class="order-btn" href="#galeria">Peça Agora</a>
             </div>
             <div class="card">
                 <img src="images/lanche_1.jpg" alt="ByteBurguer" class="menu-img">
                 <div class="menu-name">ByteBurguer</div>
-                <div class="order-btn">Peça Agora</div>
+                <a class="order-btn" href="#galeria">Peça Agora</a>
             </div>
             <div class="card">
                 <img src="images/batata_1.jpg" alt="CheddarScript" class="menu-img">
                 <div class="menu-name">CheddarScript</div>
-                <div class="order-btn">Peça Agora</div>
+                <a class="order-btn" href="#galeria">Peça Agora</a>
             </div>
         </div>
     </div>
@@ -313,10 +313,10 @@
         </main>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" id="barra_lateral">
         <div class="sidebar-content">
             <!-- Seção do carrinho de pedidos -->
-            <button class="close-btn">✖</button>
+            <button class="close-btn" onclick="document.getElementById('barra_lateral').style.display = 'none'">✖</button>
             <h1 class="title_barra_lateral">Pedido</h1>
 
             <div class="order-info">
