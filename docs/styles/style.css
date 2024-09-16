@@ -1,12 +1,751 @@
+/*Navbar*/
+
+/* Reseta margens, preenchimentos e define a caixa de modelo padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* Define o fundo da página principal com uma imagem de fundo */
+.fundo {
+    min-height: 100vh;
+    background: url("../images/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo do cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0 45px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+}
+
+/* Logo do cabeçalho */
+header .div_logo {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+header .logo {
+    padding: 30px;
+    display: flex;
+    width: 180px;
+    height: 180px;
+}
+
+/* Navegação do cabeçalho */
+header .div_navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header .navbar ul li a {
+    font-size: 13px;
+    padding: 13px;
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+header .navbar ul::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ffffff;
+}
+
+header .navbar ul::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ffffff;
+}
+
+header .navbar ul li {
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+}
+
+header .navbar ul li:not(:last-child) {
+    border-right: 1px solid #ffffff;
+}
+
+/* Estilo dos links de navegação */
+.navbar_itens {
+    font-size: 13px;
+    padding: 13px 20px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    border-radius: 0;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s, padding 0.3s, margin 0.3s;
+}
+
+.navbar_itens:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0;
+    padding: 13px 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.navbar_itens_btn {
+    border: none;
+    box-shadow: none;
+}
+
+header .navbar ul li a:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/*Botão de entrar e cadastro*/
+
+/* Estilo dos botões de login e cadastro */
+header .login {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+header .login ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .login ul li {
+    margin-left: 20px;
+}
+
+header .login ul li a {
+    font-size: 13px;
+    padding: 10px 20px;
+    color: #ffffff;
+    display: block;
+    white-space: nowrap;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+header .login ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    margin: 0;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* Estilo da seção de boas-vindas */
+.welcome-section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 70px;
+    top: 90%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 600px;
+    padding: 20px
+}
+
+/* Título e texto da seção de boas-vindas */
+.title_inicio {
+    font-size: 36px;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-transform: none;
+}
+
+/* Botão de chamada para ação */
+.cta-button {
+    display: inline-block;
+    padding: 12px 50px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 0 30px 0;
+}
+
+.cta-button:hover {
+    background-color: red;
+    color: #ffffff;
+}
+
+
+/*Página do carrossel*/
+
+/* Estilo do fundo da página do carrossel */
+.fundo_2 {
+    min-height: 100vh;
+    background-color: #151716;
+}
+
+/* Estilo do cabeçalho do carrossel */
+.header_destaque {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title_destaque {
+    color: white;
+    font-size: 64px;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.highlight_destaque {
+    color: gold;
+    font-size: 64px;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Estilo do carrossel */
+.carousel-wrapper {
+    background-color: #f0f0f0;
+    padding: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#carouselExampleCaptions {
+    width: 50%;
+    margin: auto;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-container {
+    padding-top: 200px;
+}
+
+#carouselExampleCaptions {
+    width: 50%;
+    margin: auto;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+/*Tela de lanches populares*/
+
+/* Estilo da tela de lanches populares */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #151716;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_pedidos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: white;
+    font-size: 64px;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.highlight {
+    color: #FF0000;
+    font-size: 64px;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Estilo do menu de lanches populares */
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.card {
+    background-color: rgba(217, 217, 217, 0.80);
+    border-radius: 40px;
+    width: 455px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.menu-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.menu-name {
+    font-size: 64px;
+    color: black;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.order-btn {
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+
+/*Galeria*/
+
+/* Estilo da galeria de imagens */
+.header_galeria {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title_galeria {
+    color: white;
+    font-size: 64px;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.highlight_galeria {
+    color: white;
+    font-size: 64px;
+    font-family: 'OFL Sorts Mill Goudy TT', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Estilo da galeria de itens */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.gallery-item {
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 70%;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    width: 400px;
+    min-height: 100%;
+    object-fit: cover;
+    border-right: 2px solid #ddd;
+    aspect-ratio: 16/9;
+}
+
+.gallery-info {
+    padding: 20px;
+    flex-grow: 1;
+    text-align: justify;
+    display: grid;
+    justify-content: space-between;
+}
+
+.gallery-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.gallery-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    background-color: #CD0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 50px;
+}
+
+.buy-button:hover {
+    background-color: #A00000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-right: none;
+    }
+
+    .gallery-info {
+        text-align: center;
+    }
+}
+
+/*Tela de avaliação*/
+
+.avaliacao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.avaliacao-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.input-avaliacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-avaliacao input {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input-avaliacao button {
+    padding: 10px 20px;
+    background-color: #f4511e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.05);
+}
+
+.avatar {
+    margin-bottom: 15px;
+}
+
+.avatar img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #f4511e;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #dcdcdc;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f4511e;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    margin-top: 120px;
+    display: none;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.title_barra_laterale {
+    font-size: 36px;
+    margin: 0;
+    color: white;
+}
+
+.order-info {
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit, .remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+
+.price {
+    font-weight: bold;
     color: black;
 }
 
+hr {
+    border: 1px solid #ccc;
+}
+
+.delivery, .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.address input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.address-btn {
+    background-color: lightgray;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-down {
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/*Rodapé*/
+
+.footer {
+    background-color: #252525;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+
+/*Tela de Cadastro*/
+
+/* Estilo do botão de fechamento */
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar .close-btn:hover {
+    color: white;
+    background: red;
+}
+
 .background {
-    background-color: black;
+    background-color: #151716;
     height: 100vh;
     width: 100%;
     justify-content: center;
@@ -28,22 +767,162 @@
     color: red;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+/* Estilo dos botões Editar, Remover e Comprar Agora */
+
+.sidebar .action-btn {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
+/* Estilo do botão Remover */
+
+.sidebar .action-btn.remove {
+    background-color: #f44336;
+}
+
+/* Estilo do botão Comprar Agora */
+
+.sidebar .action-btn.buy {
+    background-color: #2196F3;
+}
+
+/* Estilo do botão Editar */
+
+.sidebar .action-btn.edit {
+    background-color: #FFC107;
+}
+
+/* Quando a barra lateral estiver visível */
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+/* Estilo dos botões de endereço e compra */
+
+.sidebar .address-btn {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar .buy-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*Tela de Login*/
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.background_login {
+    background-color: #151716;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #837f7f;
     border-radius: 10px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-    border: 2px solid #f1f1f1;
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: black;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    text-align: left;
+    font-size: 18px;
+    color: black;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #555;
+}
+
+.register-section {
+    margin-top: 20px;
+}
+
+.register-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    color: green;
+}
+
+/*Rodapé*/
+
+@media (max-width: 991px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000000;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
 }
