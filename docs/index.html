@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>CodeGrill</title>
 
     <!-- Link para o arquivo CSS personalizado -->
@@ -20,33 +21,62 @@
 </head>
 <body>
 
-<header>
-    <!-- Seção do cabeçalho com logo e barra de navegação -->
-    <div class="div_logo">
-        <img src="images/logo.png" alt="Logo do CodeGrill" class="logo">
-    </div>
-    <div class="div_navbar">
-        <nav class="navbar">
-            <ul>
+<nav class="navbar navbar-expand-lg bg-body-tertiary nav-color" style="background: #000000 !important;">
+    <button style="border: 1px solid white" class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <div class="div_logo">
+                        <img src="images/logo.png" alt="Logo do CodeGrill" class="logo">
+                    </div>
+                </li>
                 <li><a href="#" class="navbar_itens">Inicio</a></li>
                 <li><a href="#destaque" class="navbar_itens">Destaque</a></li>
                 <li><a href="#popular" class="navbar_itens">Popular</a></li>
                 <li><a href="#galeria" class="navbar_itens">Galeria</a></li>
                 <li><a href="#avaliacao" class="navbar_itens">Avaliação</a></li>
-                <li><button class="navbar_itens navbar_itens_btn" onclick="document.getElementById('barra_lateral').style.display = 'block'">Pedido</button></li>
+                <li>
+                    <button class="navbar_itens navbar_itens_btn"
+                            onclick="document.getElementById('barra_lateral').style.display = 'block'">Pedido
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            </ul>
-        </nav>
-    </div>
-    <div class="div_login">
-        <nav class="login">
-            <ul>
-                <li><a href="login.html">Entrar</a></li>
-                <li><a href="cadastro.html">Registrar-se</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!--<header>-->
+<!--    &lt;!&ndash; Seção do cabeçalho com logo e barra de navegação &ndash;&gt;-->
+<!--    <div class="div_logo">-->
+<!--        <img src="images/logo.png" alt="Logo do CodeGrill" class="logo">-->
+<!--    </div>-->
+<!--    <div class="div_navbar">-->
+<!--        <nav class="navbar">-->
+<!--            <ul>-->
+<!--                <li><a href="#" class="navbar_itens">Inicio</a></li>-->
+<!--                <li><a href="#destaque" class="navbar_itens">Destaque</a></li>-->
+<!--                <li><a href="#popular" class="navbar_itens">Popular</a></li>-->
+<!--                <li><a href="#galeria" class="navbar_itens">Galeria</a></li>-->
+<!--                <li><a href="#avaliacao" class="navbar_itens">Avaliação</a></li>-->
+<!--                <li><button class="navbar_itens navbar_itens_btn" onclick="document.getElementById('barra_lateral').style.display = 'block'">Pedido</button></li>-->
+
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!--    <div class="div_login">-->
+<!--        <nav class="login">-->
+<!--            <ul>-->
+<!--                <li><a href="login.html">Entrar</a></li>-->
+<!--                <li><a href="cadastro.html">Registrar-se</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!--</header>-->
 
 <div class="fundo">
     <!-- Seção de boas-vindas -->
@@ -316,7 +346,8 @@
     <div class="sidebar" id="barra_lateral">
         <div class="sidebar-content">
             <!-- Seção do carrinho de pedidos -->
-            <button class="close-btn" onclick="document.getElementById('barra_lateral').style.display = 'none'">✖</button>
+            <button class="close-btn" onclick="document.getElementById('barra_lateral').style.display = 'none'">✖
+            </button>
             <h1 class="title_barra_lateral">Pedido</h1>
 
             <div class="order-info">

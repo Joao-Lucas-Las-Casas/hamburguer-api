@@ -35,13 +35,13 @@ header {
 }
 
 /* Logo do cabeçalho */
-header .div_logo {
+.div_logo {
     display: flex;
     justify-content: flex-start;
     max-width: 100%;
 }
 
-header .logo {
+.logo {
     padding: 30px;
     display: flex;
     width: 180px;
@@ -475,24 +475,6 @@ body {
     background-color: #A00000;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .gallery-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery-image {
-        width: 100%;
-        height: auto;
-        border-right: none;
-    }
-
-    .gallery-info {
-        text-align: center;
-    }
-}
-
 /*Tela de avaliação*/
 
 .avaliacao {
@@ -901,28 +883,10 @@ input:focus {
     color: green;
 }
 
-/*Rodapé*/
+/*Responsividade do site*/
 
-@media (max-width: 991px) {
+/* Responsividade */
+@media all and (max-width: 1020px) {
 
-    header {
-        padding: 20px;
-    }
 
-    header label {
-        display: initial;
-    }
-
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #000000;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-    }
-
-    header .navbar ul li {
-        width: 100%;
-    }
 }
