@@ -9,7 +9,7 @@ const createUser = (event) => {
         data[key] = value;
     });
 
-    fetch('https://webhook.site/394c5c86-fb80-43ba-9dc7-2cd4d5dd4ec1', {
+    fetch('https://webhook.site/16025872-bf59-4bdf-90ba-358ae674b586', {
         method: 'POST',
         mode: 'no-cors',
         headers: {

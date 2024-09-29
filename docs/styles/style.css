@@ -15,6 +15,8 @@
     background: url("../images/background.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
 }
 
 /* Estilo do cabeçalho fixo */
@@ -35,35 +37,26 @@ header {
 }
 
 /* Logo do cabeçalho */
-header .div_logo {
+.div_logo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     max-width: 100%;
 }
 
-header .logo {
-    padding: 30px;
+.logo {
     display: flex;
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
 }
 
 /* Navegação do cabeçalho */
-header .div_navbar {
+.div_navbar {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-header .navbar ul li a {
-    font-size: 13px;
-    padding: 13px;
-    color: #ffffff;
-    display: block;
-    text-decoration: none;
-}
-
-header .navbar ul {
+.navbar_ul {
     list-style: none;
     display: flex;
     padding: 0;
@@ -71,7 +64,7 @@ header .navbar ul {
     position: relative;
 }
 
-header .navbar ul::before {
+.navbar_ul::before {
     content: "";
     position: absolute;
     left: 0;
@@ -81,7 +74,7 @@ header .navbar ul::before {
     background-color: #ffffff;
 }
 
-header .navbar ul::after {
+.navbar_ul::after {
     content: "";
     position: absolute;
     right: 0;
@@ -91,13 +84,13 @@ header .navbar ul::after {
     background-color: #ffffff;
 }
 
-header .navbar ul li {
+.navbar_ul li {
     position: relative;
     margin: 0;
     padding: 0 20px;
 }
 
-header .navbar ul li:not(:last-child) {
+.navbar_ul li:not(:last-child) {
     border-right: 1px solid #ffffff;
 }
 
@@ -105,12 +98,14 @@ header .navbar ul li:not(:last-child) {
 .navbar_itens {
     font-size: 13px;
     padding: 13px 20px;
+    margin: 0 20px;
     color: #ffffff;
     display: block;
     text-align: center;
     border-radius: 0;
     background-color: transparent;
     transition: background-color 0.3s, color 0.3s, padding 0.3s, margin 0.3s;
+    text-decoration: none;
 }
 
 .navbar_itens:hover {
@@ -135,7 +130,7 @@ header .navbar ul li a:hover {
 /*Botão de entrar e cadastro*/
 
 /* Estilo dos botões de login e cadastro */
-header .login {
+.login {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -143,18 +138,19 @@ header .login {
     white-space: nowrap;
 }
 
-header .login ul {
+.login ul {
     display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header .login ul li {
+.login ul li {
     margin-left: 20px;
 }
 
-header .login ul li a {
+.login ul li a {
     font-size: 13px;
     padding: 10px 20px;
     color: #ffffff;
@@ -184,13 +180,10 @@ body {
 .welcome-section {
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 70px;
-    top: 90%;
-    transform: translateY(-50%);
     text-align: left;
     max-width: 600px;
-    padding: 20px
+    padding: 20px;
+    margin-top: 130px;
 }
 
 /* Título e texto da seção de boas-vindas */
@@ -240,8 +233,7 @@ body {
 
 /* Estilo do cabeçalho do carrossel */
 .header_destaque {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -271,21 +263,7 @@ body {
     flex-direction: column;
 }
 
-#carouselExampleCaptions {
-    width: 50%;
-    margin: auto;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-container {
-    padding-top: 200px;
-}
-
-#carouselExampleCaptions {
+.carousel_size {
     width: 50%;
     margin: auto;
 }
@@ -294,6 +272,10 @@ body {
     width: 100%;
     height: 520px;
     object-fit: cover;
+}
+
+.carousel-container {
+    padding-top: 100px;
 }
 
 /*Tela de lanches populares*/
@@ -306,18 +288,12 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-.container {
+.container_local {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .header_pedidos {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -341,9 +317,12 @@ body {
 .menu {
     display: flex;
     gap: 40px;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
-.card {
+.card_populares {
     background-color: rgba(217, 217, 217, 0.80);
     border-radius: 40px;
     width: 455px;
@@ -391,8 +370,7 @@ body {
 
 /* Estilo da galeria de imagens */
 .header_galeria {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -434,10 +412,9 @@ body {
 }
 
 .gallery-image {
-    width: 400px;
+    width: 100%;
     min-height: 100%;
     object-fit: cover;
-    border-right: 2px solid #ddd;
     aspect-ratio: 16/9;
 }
 
@@ -473,24 +450,6 @@ body {
 
 .buy-button:hover {
     background-color: #A00000;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .gallery-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery-image {
-        width: 100%;
-        height: auto;
-        border-right: none;
-    }
-
-    .gallery-info {
-        text-align: center;
-    }
 }
 
 /*Tela de avaliação*/
@@ -532,7 +491,7 @@ body {
 
 .reviews {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -540,11 +499,11 @@ body {
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
     text-align: center;
-    margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    margin: 20px;
+    display: ruby;
 }
 
 .review:hover {
@@ -553,13 +512,16 @@ body {
 
 .avatar {
     margin-bottom: 15px;
+    width: 110px;
+    height: 110px;
 }
 
 .avatar img {
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: 3px solid #f4511e;
+    object-fit: cover;
 }
 
 .review-text {
@@ -585,14 +547,19 @@ body {
     height: 100vh;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 110px;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     padding: 20px;
     overflow-y: auto;
-    margin-top: 120px;
     display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        top: 50px;
+    }
 }
 
 .sidebar-content {
@@ -692,7 +659,6 @@ hr {
     cursor: pointer;
 }
 
-
 /*Rodapé*/
 
 .footer {
@@ -756,7 +722,6 @@ hr {
 .register-container {
     background-color: #837f7f;
     border-radius: 10px;
-    min-height: 60vh;
     width: 40vw;
     padding: 40px;
     max-height: 80vh;
@@ -901,28 +866,21 @@ input:focus {
     color: green;
 }
 
-/*Rodapé*/
+.texto-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
-@media (max-width: 991px) {
 
-    header {
-        padding: 20px;
+@media (max-width: 576px) {
+    .texto-clamp {
+        -webkit-line-clamp: 3;
     }
-
-    header label {
-        display: initial;
-    }
-
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #000000;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-    }
-
-    header .navbar ul li {
+    .carousel_size {
         width: 100%;
+    }
+    .carousel-inner img {
+        height: 300px;
     }
 }
