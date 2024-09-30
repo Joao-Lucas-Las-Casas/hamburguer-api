@@ -796,6 +796,23 @@ hr {
     font-size: 16px;
 }
 
+.login-section {
+    margin-top: 20px;
+}
+
+.login-botao {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-botao:hover {
+    color: green;
+}
+
 /*Tela de Login*/
 
 body {
@@ -864,6 +881,23 @@ input:focus {
 
 .register-btn:hover {
     color: green;
+}
+
+.pagina_inicial-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pagina_inicial-btn:hover {
+    color: green;
+}
+
+.inicio-section {
+    margin-top: 20px;
 }
 
 .texto-clamp {
