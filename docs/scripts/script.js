@@ -1,4 +1,4 @@
-const createUser = (event) => {
+const sendForm = (event) => {
     event.preventDefault();
 
     const form = document.getElementById('register-form');
