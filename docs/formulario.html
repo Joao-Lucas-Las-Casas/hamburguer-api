@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
   <title>CodeGrill</title>
 
   <!-- Link para o CSS do Bootstrap -->
@@ -25,30 +26,30 @@
 <div class="register-container">
   <h1 class="text-center">Cadastro de Produtos</h1>
   <!-- Formulário de produtos -->
-  <form id="register-form" onsubmit="sendForm(event)">
-    <!-- Campo do nome do lanche -->
+  <form id="register-form" onsubmit="sendForm(event, '/v1/users/create', 'POST')">
+    <!-- Campo do nome do produto -->
     <div class="form-group">
-      <label for="nome_lanche" class="form-label">Nome do lanche<i class="required-field">*</i></label>
-      <input class="form-control" id="nome_lanche" name="nome_lanche" type="text" required placeholder="Digite o nome do lanche">
+      <label for="nome_do_produto" class="form-label">Nome do produto<i class="required-field">*</i></label>
+      <input class="form-control" id="nome_do_produto" name="nome_do_produto" type="text" required placeholder="Digite o nome do produto">
     </div>
 
-    <!-- Campo de descrição do lanche -->
+    <!-- Campo de descrição do produto -->
     <div class="form-group mt-3">
-      <label for="descricao" class="form-label">Descrição do lanche<i class="required-field">*</i></label>
-      <input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Digite a descrição do lanche">
+      <label for="descricao" class="form-label">Descrição do produto<i class="required-field">*</i></label>
+      <input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Digite a descrição do produto">
     </div>
 
-    <!-- Campo de preço -->
+    <!-- Campo de categoria do produto -->
     <div class="form-group mt-3">
-      <label for="preco" class="form-label">Valor do lanche<i class="required-field">*</i></label>
+      <label for="categoria" class="form-label">Categoria do produto<i class="required-field">*</i></label>
+      <input class="form-control" id="categoria" name="categoria" type="text" required placeholder="Digite a categoria do produto">
+    </div>
+
+    <!-- Campo de preço do produto -->
+    <div class="form-group mt-3">
+      <label for="preco" class="form-label">Valor do produto<i class="required-field">*</i></label>
       <input class="form-control" id="preco" name="preco" type="text" required
-             placeholder="Digite o preço">
-    </div>
-
-    <!-- Campo de Combos -->
-    <div class="form-group mt-3">
-      <label for="combo" class="form-label">Combos<i class="required-field">*</i></label>
-      <input class="form-control" id="combo" name="combo" type="text" required placeholder="Digite o combo">
+             placeholder="Digite o valor do produto">
     </div>
 
     <!-- Campo de desconto -->
@@ -57,11 +58,23 @@
       <input class="form-control" id="desconto" name="desconto" type="text" required placeholder="Digite o desconto">
     </div>
 
+    <!-- Campo de Imagens -->
+    <div class="form-group mt-3">
+      <label for="imagens" class="form-label">Imagens<i class="required-field">*</i></label>
+      <input class="form-control" id="imagens" name="imagens" type="text" required placeholder="Ensira a imagem">
+    </div>
+
     <!-- Botão de envio do formulário -->
     <div class="form-group mt-3 text-center">
       <button class="btn btn-lg btn-success" type="submit">Enviar</button>
     </div>
   </form>
+
+  <!-- Campo de introdução do produto -->
+  <div class="form-group mt-3">
+    <label for="introducao" class="form-label">Introdução<i class="required-field">*</i></label>
+    <input class="form-control" id="introducao" name="introducao" type="text" required placeholder="Digite a Introdução">
+  </div>
 
   <!-- Voltar para página inicial -->
   <div class="inicio-section">

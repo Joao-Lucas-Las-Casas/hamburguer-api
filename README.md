@@ -10,10 +10,9 @@ Este projeto é um site de e-commerce especializado em hamburguerias, onde os us
 - **Autenticação de Usuário**: Sistema de login e logout para acessar e proteger as funcionalidades da conta do usuário.
 - **Navegação de Produtos**: O usuário poderá visualizar a lista de lanches disponíveis, com detalhes como descrição, preço e imagem.
 - **Carrinho de Compras**: Possibilidade de adicionar lanches ao carrinho de compras e visualizar os itens selecionados.
-- **Finalização de Compra**: Processo de checkout que inclui a revisão dos itens, cálculo do total da compra e fornecimento dos dados para pagamento e entrega.
+- **Finalização de Compra**: Processo de checkout da compra.
 - **Alteração de dados do Usuário**: O usuário poderá alterar os dados de sua conta.
-- **Manipulação de endereço**: O usuário terá a possibilidade de criar endereço, alterar os dados do mesmo ou excluir o endereço se nescessário.
-- **Manipulação de comentário**: O usuário terá a possibilidade de criar comentários, avaliar com um total de cinco estrelas ou excluir se nescessário.
+- **Manipulação de comentário**: O usuário terá a possibilidade de criar comentários.
 
 
 ## Tecnologias Utilizadas
@@ -28,6 +27,10 @@ Este projeto é um site de e-commerce especializado em hamburguerias, onde os us
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/Joao-Lucas-Las-Casas/hamburguer-api.git
+   
+2. **Página do site**:
+   ```bash
+   git pages https://joao-lucas-las-casas.github.io/hamburguer-api/
 
 ## Participantes do Projeto
 

@@ -12,6 +12,9 @@
 ### - Pedido:
   https://www.figma.com/design/zassunVXZ0VADqFZuj3Wjv/Untitled?node-id=1-2&t=9AUwMSF8VkJav07t-4
 
+### - Cadastro de produtos:
+  https://www.figma.com/design/apPruJY4Qypj5K2NSDo0Tf/Cadastro-de-Produtos?node-id=0-1&node-type=canvas&t=wd7YvdQ2s3BXcmxY-0
+
 ### Desigh do Projeto:
 
 ### 1. Página Principal
@@ -20,7 +23,7 @@
 #### Barra Superior Fixa:
 
 - Logo: "CodeGrill" com detalhes em branco e preto.
-- 8 Botões: Ficam fixos no topo e seguem o scroll do usuário.
+- 9 Botões: Ficam fixos no topo e seguem o scroll do usuário.
 
 ##### Seção Inicial:
 
@@ -50,7 +53,7 @@
 ##### Seção Avaliação:
 
 - Título: "Avaliação dos nosso clientes" centralizado.
-- Cards Cinza Claros: Contendo foto, apelido, estrelas e texto das avaliações.
+- Cards Cinza Claros: Contendo foto, apelido e texto das avaliações.
 - Subtítulo: "Avaliação dos nossos clientes" seguido por área para novos comentários.
 - Fundo: Cinza escuro.
 
@@ -61,7 +64,6 @@
 - Título: "Pedido".
 - Conteúdo: Nome dos pedidos, quantidade, preço individual e total.
 - Endereço: Usuário pode adicionar endereço, número e complemento.
-- Botão X: Usuário pode apagar endereço, número e complemento, se desejar.
 - Botão de Compra: Para finalizar a compra.
 - Fundo: Cinza escuro.
 
@@ -78,7 +80,8 @@
 - Campo de Nome: Com título "Nome" e espaço para o usuário escrever o login.
 - Campo de Senha: Com título "Senha" e espaço para o usuário escrever a senha.
 - Botão de Login: "Entrar".
-- Link Interativo: Para redirecionar o usuário à página de cadastro.
+- Botão: Para redirecionar o usuário à página de cadastro.
+- Botão de Inicio: Direciona o usuário a tela de inicial.
 - Fundo: Cinza escuro.
 
 ### 3. Página de Cadastro
@@ -90,8 +93,25 @@
 - Nome: Campo para inserir o nome.
 - E-mail: Campo para inserir o e-mail.
 - Senha: Campo para inserir a senha.
+- CPF: Campo para inserir o CPF.
+- CEP: Campo para inserir o CEP.
+- Celular: Campo para inserir o número de celular.
 - Botão de Enviar: "Enviar" para concluir o cadastro.
+- Botão de Login: Direciona o usuário a tela de Login.
+- Botão de Inicio: Direciona o usuário a tela de inicial.
 - Fundo: Cinza escuro.
 
+### 4. Página de Cadastro de produtos
+   Paleta de Cores: Branco, preto e cinza claro.
 
+- Card Centralizado:
+- Título Principal: "Cadastro de Produtos".
+- Campos de Cadastro:
+- Nome do lanche: Campo para inserir o nome do produto.
+- Descrição do lanche: Campo para inserir a descrição do lanche.
+- Descontos: Campo para inserir descontos para os lanches.
+- Valor do lanche: Campo para inserir o preço.
+- Botão de Enviar: "Enviar" para concluir o cadastro da informações dos produtos.
+- Botão de Inicio: Direciona o usuário a tela de inicial.
+- Fundo: Cinza escuro.
 

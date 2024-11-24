@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>CodeGrill</title>
 
     <!-- Link para o CSS do Bootstrap -->
@@ -25,7 +26,7 @@
 <div class="register-container">
     <h1 class="text-center">Cadastrar-se</h1>
     <!-- Formulário de registro -->
-    <form id="register-form" onsubmit="sendForm(event)">
+    <form id="register-form" onsubmit="sendForm(event, '/v1/users/create', 'POST')">
         <!-- Campo de nome -->
         <div class="form-group">
             <label for="name" class="form-label">Nome<i class="required-field">*</i></label>

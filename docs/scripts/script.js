@@ -1,7 +1,7 @@
-const sendForm = (event) => {
+const sendForm = async (event, url, method) => {
     event.preventDefault();
+    const form = document.getElementById(event.target.id);
 
-    const form = document.getElementById('register-form');
     const formData = new FormData(form);
 
     const data = {};
@@ -9,15 +9,25 @@ const sendForm = (event) => {
         data[key] = value;
     });
 
-    fetch('https://webhook.site/16025872-bf59-4bdf-90ba-358ae674b586', {
-        method: 'POST',
-        mode: 'no-cors',
+    const response = await fetch(`http://localhost:8080${url}`, {
+        method: method,
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
         body: JSON.stringify(data),
-    })
-        .then(response => response.json())
-        .catch((error) => console.log(error));
+    });
+
+    if (!response.ok) {
+        throw new Error(`Erro na requisição: ${response.status}`);
+    }
+
+    return await response.json();
 };
+
+const login = async (event) => {
+    const response = await sendForm(event, '/v1/login', 'POST');
+    const token = response.token;
+    localStorage.setItem(token, token);
+}
+

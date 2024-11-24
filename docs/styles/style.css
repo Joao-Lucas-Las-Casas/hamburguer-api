@@ -163,7 +163,7 @@ header .navbar ul li a:hover {
     text-decoration: none;
 }
 
-header .login ul li a:hover {
+.login ul li a:hover {
     background-color: #ffffff;
     color: #000000;
 }
