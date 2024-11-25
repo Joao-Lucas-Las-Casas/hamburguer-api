@@ -27,10 +27,6 @@ Este projeto é um site de e-commerce especializado em hamburguerias, onde os us
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/Joao-Lucas-Las-Casas/hamburguer-api.git
-   
-2. **Página do site**:
-   ```bash
-   git pages https://joao-lucas-las-casas.github.io/hamburguer-api/
 
 ## Participantes do Projeto
 
